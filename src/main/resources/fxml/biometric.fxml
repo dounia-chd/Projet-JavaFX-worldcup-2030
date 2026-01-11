@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="ma.mondial2030.controller.BiometricController" stylesheets="@../css/style.css">
+   <top>
+      <HBox alignment="CENTER_LEFT" spacing="20.0">
+         <children>
+            <Button fx:id="backButtonTop" text="← Retour" onAction="#handleBack" styleClass="secondary-button">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Label text="Biométrie &amp; QR Code" styleClass="page-title">
+               <font>
+                  <Font size="28.0" />
+               </font>
+            </Label>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+      </HBox>
+   </top>
+   
+   <center>
+      <VBox spacing="20.0" styleClass="biometric-container">
+         <children>
+            <HBox spacing="30.0" alignment="CENTER">
+               <children>
+                  <VBox spacing="15.0" alignment="CENTER">
+                     <children>
+                        <Label text="Empreinte Faciale" styleClass="section-title">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <ImageView fx:id="faceImageView" fitHeight="200.0" fitWidth="200.0" preserveRatio="true" styleClass="image-preview" />
+                        <Button fx:id="uploadImageButton" text="Charger une photo" onAction="#handleUploadImage" styleClass="primary-button" />
+                        <Button fx:id="generateFacePrintButton" text="Créer empreinte faciale" onAction="#handleGenerateFacePrint" styleClass="primary-button" />
+                        <Button fx:id="assignBiometricButton" text="Assigner biométrie" onAction="#handleAssignBiometric" styleClass="primary-button" />
+                     </children>
+                  </VBox>
+                  
+                  <VBox spacing="15.0" alignment="CENTER">
+                     <children>
+                        <Label text="QR Code" styleClass="section-title">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <ImageView fx:id="qrCodeImageView" fitHeight="200.0" fitWidth="200.0" preserveRatio="true" styleClass="image-preview" />
+                        <Button fx:id="generateQRButton" text="Générer QR Code" onAction="#handleGenerateQR" styleClass="primary-button" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            
+            <Separator />
+            
+            <VBox spacing="15.0" alignment="CENTER">
+               <children>
+                  <Label text="Contrôle d'accès" styleClass="section-title">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label text="Vérifiez votre accès avec ticket + QR Code + biométrie" styleClass="subtitle-label" />
+                  <Button fx:id="verifyAccessButton" text="Vérifier l'accès" onAction="#handleVerifyAccess" styleClass="primary-button" minWidth="200.0" minHeight="50.0">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Button>
+                  <Label fx:id="statusLabel" styleClass="status-label" />
+               </children>
+            </VBox>
+         </children>
+         <padding>
+            <Insets bottom="20.0" left="40.0" right="40.0" top="20.0" />
+         </padding>
+      </VBox>
+   </center>
+   
+   <bottom>
+      <HBox alignment="CENTER_LEFT" spacing="10.0">
+         <children>
+            <Button fx:id="backButton" text="Retour" onAction="#handleBack" styleClass="secondary-button" />
+         </children>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="10.0" />
+         </padding>
+      </HBox>
+   </bottom>
+</BorderPane>

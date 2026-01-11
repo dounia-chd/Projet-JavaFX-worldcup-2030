@@ -1,0 +1,300 @@
+/* ============================================
+   Styles pour Mondial 2030 - Application JavaFX
+   ============================================ */
+
+.root {
+    -fx-background-color: #f5f5f5;
+    -fx-font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* ============================================
+   Titres et Labels
+   ============================================ */
+
+.title-label {
+    -fx-text-fill: #1a5490;
+    -fx-font-weight: bold;
+}
+
+.subtitle-label {
+    -fx-text-fill: #666666;
+}
+
+.page-title {
+    -fx-text-fill: #1a5490;
+    -fx-font-weight: bold;
+}
+
+.section-title {
+    -fx-text-fill: #333333;
+    -fx-font-weight: bold;
+}
+
+.welcome-label {
+    -fx-text-fill: #1a5490;
+    -fx-font-weight: bold;
+}
+
+.role-label {
+    -fx-text-fill: #666666;
+    -fx-font-size: 14px;
+}
+
+.details-label {
+    -fx-text-fill: #333333;
+    -fx-font-size: 14px;
+    -fx-padding: 10px;
+}
+
+.result-label {
+    -fx-font-weight: bold;
+    -fx-padding: 20px;
+}
+
+/* ============================================
+   Containers
+   ============================================ */
+
+.login-container {
+    -fx-background-color: white;
+    -fx-background-radius: 10px;
+    -fx-padding: 40px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 5);
+    -fx-max-width: 450px;
+    -fx-max-height: 600px;
+}
+
+.dashboard-container {
+    -fx-padding: 30px;
+}
+
+.form-container {
+    -fx-padding: 20px 0px;
+}
+
+.header-container {
+    -fx-background-color: white;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.05), 5, 0, 0, 2);
+}
+
+.scan-container {
+    -fx-padding: 40px;
+}
+
+.purchase-section {
+    -fx-padding: 20px;
+    -fx-background-color: #f9f9f9;
+    -fx-background-radius: 5px;
+}
+
+/* ============================================
+   Boutons
+   ============================================ */
+
+.primary-button {
+    -fx-background-color: #1a5490;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 5px;
+    -fx-padding: 10px 20px;
+    -fx-cursor: hand;
+}
+
+.primary-button:hover {
+    -fx-background-color: #144075;
+}
+
+.primary-button:pressed {
+    -fx-background-color: #0d2f52;
+}
+
+.secondary-button {
+    -fx-background-color: #6c757d;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 5px;
+    -fx-padding: 10px 20px;
+    -fx-cursor: hand;
+}
+
+.secondary-button:hover {
+    -fx-background-color: #5a6268;
+}
+
+.secondary-button:pressed {
+    -fx-background-color: #484f54;
+}
+
+.menu-button {
+    -fx-background-color: white;
+    -fx-text-fill: #1a5490;
+    -fx-font-weight: bold;
+    -fx-background-radius: 10px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 3);
+    -fx-cursor: hand;
+}
+
+.menu-button:hover {
+    -fx-background-color: #e8f0f7;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.15), 15, 0, 0, 5);
+}
+
+.menu-button:pressed {
+    -fx-background-color: #d0e0ed;
+}
+
+/* ============================================
+   Champs de texte
+   ============================================ */
+
+.text-field, .password-field, .combo-box {
+    -fx-background-color: white;
+    -fx-border-color: #cccccc;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+    -fx-padding: 10px;
+    -fx-font-size: 14px;
+}
+
+.text-field:focused, .password-field:focused, .combo-box:focused {
+    -fx-border-color: #1a5490;
+    -fx-border-width: 2px;
+}
+
+.qr-input {
+    -fx-font-size: 16px;
+    -fx-padding: 15px;
+}
+
+/* ============================================
+   Tableaux
+   ============================================ */
+
+.data-table {
+    -fx-background-color: white;
+    -fx-border-color: #cccccc;
+    -fx-border-radius: 5px;
+}
+
+.data-table .column-header {
+    -fx-background-color: #1a5490;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-padding: 10px;
+}
+
+.data-table .table-row-cell {
+    -fx-border-color: #eeeeee;
+}
+
+.data-table .table-row-cell:selected {
+    -fx-background-color: #e8f0f7;
+    -fx-text-background-color: #1a5490;
+}
+
+.data-table .table-row-cell:hover {
+    -fx-background-color: #f5f5f5;
+}
+
+/* ============================================
+   SplitPane
+   ============================================ */
+
+.split-pane {
+    -fx-background-color: transparent;
+}
+
+.split-pane-divider {
+    -fx-background-color: #cccccc;
+}
+
+/* ============================================
+   Tabs
+   ============================================ */
+
+.admin-tabs {
+    -fx-tab-min-width: 150px;
+    -fx-tab-min-height: 40px;
+}
+
+.admin-tabs .tab {
+    -fx-background-color: #e9ecef;
+    -fx-text-fill: #333333;
+    -fx-font-weight: bold;
+}
+
+.admin-tabs .tab:selected {
+    -fx-background-color: #1a5490;
+    -fx-text-fill: white;
+}
+
+.admin-tabs .tab:hover {
+    -fx-background-color: #d0e0ed;
+}
+
+.admin-tabs .tab:selected:hover {
+    -fx-background-color: #144075;
+}
+
+/* ============================================
+   ScrollBar
+   ============================================ */
+
+.scroll-bar:vertical {
+    -fx-background-color: #f5f5f5;
+}
+
+.scroll-bar:vertical .thumb {
+    -fx-background-color: #cccccc;
+    -fx-background-radius: 5px;
+}
+
+.scroll-bar:vertical .thumb:hover {
+    -fx-background-color: #999999;
+}
+
+/* ============================================
+   Alertes et Dialogs
+   ============================================ */
+
+.alert {
+    -fx-background-color: white;
+}
+
+.alert .header-panel {
+    -fx-background-color: #1a5490;
+}
+
+.alert .header-panel .label {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+/* ============================================
+   Biométrie
+   ============================================ */
+
+.biometric-container {
+    -fx-padding: 30px;
+}
+
+.image-preview {
+    -fx-border-color: #cccccc;
+    -fx-border-radius: 5px;
+    -fx-background-color: white;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 5, 0, 0, 2);
+}
+
+.status-label {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-padding: 15px;
+    -fx-background-color: #f0f0f0;
+    -fx-background-radius: 5px;
+}
+
+.hint-label {
+    -fx-font-size: 12px;
+    -fx-text-fill: #666666;
+    -fx-padding: 5px;
+}

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="ma.mondial2030.controller.LoginController" stylesheets="@../css/style.css">
+   <center>
+      <VBox alignment="CENTER" spacing="20.0" styleClass="login-container">
+         <children>
+            <Label text="Mondial 2030" styleClass="title-label">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <Label text="Système de Billetterie et Accréditation" styleClass="subtitle-label">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            
+            <VBox spacing="15.0" styleClass="form-container">
+               <children>
+                  <TextField fx:id="usernameField" promptText="Nom d'utilisateur" />
+                  <PasswordField fx:id="passwordField" promptText="Mot de passe" />
+                  
+                  <HBox spacing="10.0" alignment="CENTER">
+                     <children>
+                        <Button fx:id="loginButton" text="Connexion" onAction="#handleLogin" defaultButton="true" styleClass="primary-button" />
+                        <Button fx:id="registerButton" text="Inscription" onAction="#handleRegister" styleClass="secondary-button" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

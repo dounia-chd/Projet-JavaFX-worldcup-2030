@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="ma.mondial2030.controller.RegisterController" stylesheets="@../css/style.css">
+   <center>
+      <VBox alignment="CENTER" spacing="20.0" styleClass="login-container">
+         <children>
+            <Label text="Inscription" styleClass="title-label">
+               <font>
+                  <Font size="32.0" />
+               </font>
+            </Label>
+            
+            <VBox spacing="12.0" styleClass="form-container">
+               <children>
+                  <TextField fx:id="usernameField" promptText="Nom d'utilisateur *" />
+                  <TextField fx:id="emailField" promptText="Email *" />
+                  <PasswordField fx:id="passwordField" promptText="Mot de passe *" />
+                  <TextField fx:id="firstNameField" promptText="Prénom *" />
+                  <TextField fx:id="lastNameField" promptText="Nom *" />
+                  <TextField fx:id="phoneField" promptText="Téléphone" />
+                  <ComboBox fx:id="roleComboBox" promptText="Rôle" />
+                  
+                  <HBox spacing="10.0" alignment="CENTER">
+                     <children>
+                        <Button fx:id="registerButton" text="S'inscrire" onAction="#handleRegister" defaultButton="true" styleClass="primary-button" />
+                        <Button fx:id="backButton" text="Retour" onAction="#handleBack" styleClass="secondary-button" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

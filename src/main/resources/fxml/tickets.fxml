@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="ma.mondial2030.controller.TicketsController" stylesheets="@../css/style.css">
+   <top>
+      <Label text="Mes Tickets" styleClass="page-title">
+         <font>
+            <Font size="28.0" />
+         </font>
+         <padding>
+            <Insets bottom="10.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+      </Label>
+   </top>
+   
+   <center>
+      <SplitPane dividerPositions="0.6" styleClass="split-pane">
+         <items>
+            <VBox spacing="15.0">
+               <children>
+                  <Label text="Liste des tickets" styleClass="section-title">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  
+                  <TableView fx:id="ticketsTable" styleClass="data-table">
+                     <columns>
+                        <TableColumn fx:id="ticketCodeColumn" text="Code Ticket" minWidth="150.0" />
+                        <TableColumn fx:id="matchColumn" text="Match" minWidth="200.0" />
+                        <TableColumn fx:id="seatColumn" text="Siège" minWidth="100.0" />
+                        <TableColumn fx:id="statusColumn" text="Statut" minWidth="100.0" />
+                     </columns>
+                  </TableView>
+                  
+                  <VBox spacing="10.0" styleClass="purchase-section">
+                     <children>
+                        <Label text="Acheter un nouveau ticket" styleClass="section-title">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <ComboBox fx:id="matchComboBox" promptText="Sélectionner un match" />
+                        <TextField fx:id="seatNumberField" promptText="Numéro de siège" />
+                        <Button fx:id="purchaseButton" text="Acheter" onAction="#handlePurchase" styleClass="primary-button" />
+                     </children>
+                  </VBox>
+               </children>
+               <padding>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </padding>
+            </VBox>
+            
+            <VBox spacing="15.0" alignment="CENTER">
+               <children>
+                  <Label text="Détails du ticket" styleClass="section-title">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  
+                  <ImageView fx:id="qrCodeImageView" fitHeight="300.0" fitWidth="300.0" preserveRatio="true" />
+                  
+                  <Label fx:id="ticketDetailsLabel" styleClass="details-label" wrapText="true" />
+               </children>
+               <padding>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </padding>
+            </VBox>
+         </items>
+      </SplitPane>
+   </center>
+   
+   <bottom>
+      <HBox alignment="CENTER_LEFT" spacing="10.0">
+         <children>
+            <Button fx:id="backButton" text="Retour" onAction="#handleBack" styleClass="secondary-button" />
+         </children>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="10.0" />
+         </padding>
+      </HBox>
+   </bottom>
+</BorderPane>
